@@ -1,0 +1,20 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for openssl $version"
+}
+module-whatis "Modulefile for openssl $version"
+
+# Dependencies
+module load common/1.0
+
+set openssl_root $::env(BASEDIR)/openssl/$version
+
+# Our environment
+prepend-path PATH $openssl_root/bin
+prepend-path LD_LIBRARY_PATH $openssl_root/lib
+prepend-path PKG_CONFIG_PATH $openssl_root/lib/pkgconfig
+prepend-path MANPATH $openssl_root/share/man

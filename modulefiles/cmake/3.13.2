@@ -1,0 +1,17 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for cmake $version"
+}
+module-whatis "Modulefile for cmake $version"
+
+# Dependencies
+module load common/1.0 gcc/4.9.4
+
+set cmake_root $::env(BASEDIR)/cmake/$version
+
+# Our environment
+prepend-path PATH $cmake_root/bin

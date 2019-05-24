@@ -1,0 +1,18 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for libyaml $version"
+}
+module-whatis "Modulefile for libyaml $version"
+
+# Dependencies
+module load common/1.0
+
+set libyaml_root $::env(BASEDIR)/libyaml/$version
+
+# Our environment
+prepend-path LD_LIBRARY_PATH $libyaml_root/lib
+prepend-path PKG_CONFIG_PATH $libyaml_root/lib/pkgconfig

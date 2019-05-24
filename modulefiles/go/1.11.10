@@ -1,0 +1,17 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for Go $version"
+}
+module-whatis "Modulefile for Go $version"
+
+# Dependencies
+module load common/1.0
+
+set go_root $::env(BASEDIR)/go/$version
+
+# Our environment
+prepend-path PATH $go_root/bin

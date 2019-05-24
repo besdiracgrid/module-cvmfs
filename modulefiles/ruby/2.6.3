@@ -1,0 +1,20 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for ruby $version"
+}
+module-whatis "Modulefile for ruby $version"
+
+# Dependencies
+module load common/1.0 libyaml/0.2.2
+
+set ruby_root $::env(BASEDIR)/ruby/$version
+
+# Our environment
+prepend-path PATH $ruby_root/bin
+prepend-path LD_LIBRARY_PATH $ruby_root/lib
+prepend-path PKG_CONFIG_PATH $ruby_root/lib/pkgconfig
+prepend-path MANPATH $ruby_root/share/man

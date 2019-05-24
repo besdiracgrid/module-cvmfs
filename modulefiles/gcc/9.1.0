@@ -1,0 +1,22 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for gcc $version"
+}
+module-whatis "Modulefile for gcc $version"
+
+# Dependencies
+module load common/1.0
+
+set gcc_root $::env(BASEDIR)/gcc/$version
+
+# Our environment
+prepend-path PATH $gcc_root/bin
+prepend-path LD_LIBRARY_PATH $gcc_root/lib64
+prepend-path MANPATH $gcc_root/share/man
+setenv CC $gcc_root/bin/gcc
+setenv CXX $gcc_root/bin/g++
+setenv FC $gcc_root/bin/gfortran

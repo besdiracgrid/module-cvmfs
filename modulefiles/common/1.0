@@ -1,0 +1,31 @@
+#%Module1.0#####################################################################
+##
+## common - versions modulefile
+##
+
+proc ModulesHelp { } {
+        global version
+        puts stderr "This module is THE common module of the IHEP."
+}
+
+set     version         1.0
+
+module-whatis   "IHEP versions module base"
+
+set base_path /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6
+
+## -- BASE DIRECTORYS --
+setenv          BASEDIR              $base_path
+
+
+set     osname          [uname sysname]
+set     osarchitecture  [uname machine]
+
+if { $osarchitecture == "x86_64" } {
+        setenv  SYSTEM_LIBPATH     lib64
+} elseif { $osarchitecture == "i686" } {
+        setenv  SYSTEM_LIBPATH     lib
+} else {
+        puts stderr "\tYour architecture is $osarchitecture. Please use x86_64 or i686 architecture"
+        break
+}
