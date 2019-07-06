@@ -15,7 +15,7 @@ git clone https://github.com/vim/vim.git
 Install:
 
 ```
-./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/vim/8.1.1640
+./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/vim/8.1.1640 --disable-fontset --disable-gui --without-x --without-gnome
 make
 make install
 ```
