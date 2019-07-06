@@ -1,6 +1,24 @@
+## Source
+
+Environment Modules
+
+<http://modules.sourceforge.net/>
+
+<https://modules.readthedocs.io/>
+
+
 ## Installation
 
 ### module 4.2.1
+
+Download:
+
+```
+wget https://github.com/cea-hpc/modules/releases/download/v4.2.1/modules-4.2.1.tar.gz
+tar -xf modules-4.2.1.tar.gz
+```
+
+Install:
 
 ```
 sudo yum install tcl-devel

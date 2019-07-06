@@ -1,3 +1,8 @@
+## Source
+
+<https://www.python.org/>
+
+
 ## Installation
 
 ### Preparation
@@ -7,6 +12,15 @@ sudo yum install openssl-devel bzip2-devel zlib-devel sqlite-devel expat-devel g
 ```
 
 ### python 3.7.3
+
+Download:
+
+```
+wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+tar -xf Python-3.7.3.tgz
+```
+
+Install:
 
 ```
 module load openssl/1.1.1b
@@ -38,10 +52,19 @@ pip install --upgrade pip
 pip install virtualenv
 ```
 
-### python 2.7.15
+### python 2.7.16
+
+Download:
 
 ```
-./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.15 --enable-unicode=ucs4
+wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
+tar -xf Python-2.7.16.tar.xz
+```
+
+Install:
+
+```
+./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.16 --enable-unicode=ucs4
 make
 make install
 ```
@@ -49,7 +72,7 @@ make install
 Install pip and virtualenv
 
 ```
-module load python/2.7.15
+module load python/2.7.16
 # Make sure using the correct python
 which python
 python -V

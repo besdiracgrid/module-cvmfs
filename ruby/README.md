@@ -1,6 +1,20 @@
+## Source
+
+<https://www.ruby-lang.org/>
+
+
 ## Installation
 
 ### ruby 2.6.3
+
+Download:
+
+```
+wget https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz
+tar -xf ruby-2.6.3.tar.gz
+```
+
+Install:
 
 ```
 sudo yum install gcc-c++ patch readline-devel zlib-devel \

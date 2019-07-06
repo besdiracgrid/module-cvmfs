@@ -1,0 +1,18 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for vim $version"
+}
+module-whatis "Modulefile for vim $version"
+
+# Dependencies
+module load common/1.0
+
+set vim_root $::env(BASEDIR)/vim/$version
+
+# Our environment
+prepend-path PATH $vim_root/bin
+prepend-path MANPATH $vim_root/share/man
