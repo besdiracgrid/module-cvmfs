@@ -1,0 +1,19 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for libevent $version"
+}
+module-whatis "Modulefile for libevent $version"
+
+# Dependencies
+module load common/1.0
+
+set libevent_root $::env(BASEDIR)/libevent/$version
+
+# Our environment
+prepend-path PATH $libevent_root/bin
+prepend-path LD_LIBRARY_PATH $libevent_root/lib
+prepend-path PKG_CONFIG_PATH $libevent_root/lib/pkgconfig

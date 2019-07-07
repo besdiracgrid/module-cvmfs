@@ -1,0 +1,18 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for tmux $version"
+}
+module-whatis "Modulefile for tmux $version"
+
+# Dependencies
+module load common/1.0 libevent/2.1.10
+
+set tmux_root $::env(BASEDIR)/tmux/$version
+
+# Our environment
+prepend-path PATH $tmux_root/bin
+prepend-path MANPATH $tmux_root/share/man
