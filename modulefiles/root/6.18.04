@@ -1,0 +1,20 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for ROOT $version"
+}
+module-whatis "Modulefile for ROOT $version"
+
+# Dependencies
+module load common/1.0 gcc/4.9.4 python/2.7.15
+
+# Our environment
+setenv ROOTSYS $::env(BASEDIR)/root/$version
+prepend-path PATH $::env(ROOTSYS)/bin
+prepend-path LD_LIBRARY_PATH $::env(ROOTSYS)/lib
+#prepend-path PKG_CONFIG_PATH $::env(ROOTSYS)/lib/pkgconfig
+prepend-path PYTHONPATH $::env(ROOTSYS)/lib
+prepend-path MANPATH $::env(ROOTSYS)/man
