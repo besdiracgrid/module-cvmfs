@@ -34,7 +34,7 @@ cd build
 
 cmake ../root-6.18.04 -DCMAKE_INSTALL_PREFIX=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/root/6.18.04 \
     -Dbuiltin_afterimage=ON -Dbuiltin_ftgl=ON -Dbuiltin_freetype=ON -Dbuiltin_glew=ON -Dbuiltin_pcre=ON -Dbuiltin_zlib=ON -Dbuiltin_tbb=ON -Dbuiltin_lzma=ON \
-    -Dexplicitlink=ON -Dsoversion=ON -Droofit=ON -Dminuit2=ON -Dgdml=ON -Dunuran=ON -Dgsl_shared=ON -Dpython=ON
+    -Dexplicitlink=ON -Dsoversion=ON -Droofit=ON -Dminuit2=ON -Dgdml=ON -Dunuran=ON -Dgsl_shared=ON -Dpython=ON -Dsqlite=OFF
 make
 make install
 ```
