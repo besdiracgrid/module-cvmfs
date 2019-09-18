@@ -9,14 +9,15 @@ installation instructions.
 
 ## Usage by modules
 
-Initialize `Environment Modules`:
+Initialize `Environment Modules`. Change the shell type if not using
+bash:
 
 ```shell
 unset MODULEPATH
-source /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/modulesetup/zsh
+source /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/modulesetup/bash
 ```
 
-Then find which packages are available to use:
+Then find which packages are available for use:
 
 ```shell
 module avail
