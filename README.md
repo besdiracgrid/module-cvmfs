@@ -9,8 +9,8 @@ installation instructions.
 
 ## Usage by modules
 
-Initialize `Environment Modules`. Change the shell type if not using
-bash:
+Initialize `Environment Modules`. Change the shell type accordingly
+if not using bash:
 
 ```shell
 unset MODULEPATH
