@@ -1,0 +1,17 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for pypy $version"
+}
+module-whatis "Modulefile for pypy $version"
+
+# Dependencies
+module load common/1.0
+
+set pypy_root $::env(BASEDIR)/pypy/pypy/$version
+
+# Our environment
+prepend-path PATH $pypy_root/bin
