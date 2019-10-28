@@ -31,6 +31,13 @@ ln -s pypy3.6 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bi
 ln -s virtualenv-pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/virtualenv
 ```
 
+Install pip:
+
+```
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/pypy3 -m ensurepip
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/pip3 install --upgrade pip wheel setuptools
+```
+
 ### pypy2.7 7.2.0
 
 Download:
@@ -51,4 +58,11 @@ Create links for default python:
 ```
 ln -s pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/python
 ln -s virtualenv-pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/virtualenv
+```
+
+Install pip:
+
+```
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/pypy -m ensurepip
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/pip install --upgrade pip wheel setuptools
 ```
