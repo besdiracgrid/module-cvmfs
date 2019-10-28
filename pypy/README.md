@@ -28,6 +28,7 @@ Create links for default python:
 
 ```
 ln -s pypy3.6 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/python
+ln -s virtualenv-pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/virtualenv
 ```
 
 ### pypy2.7 7.2.0
@@ -49,4 +50,5 @@ Create links for default python:
 
 ```
 ln -s pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/python
+ln -s virtualenv-pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/virtualenv
 ```
