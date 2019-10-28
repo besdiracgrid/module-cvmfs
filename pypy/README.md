@@ -7,6 +7,8 @@
 
 ## Installation
 
+Only need to extract the portable binary.
+
 ### pypy3.6 7.2.0
 
 Download:
