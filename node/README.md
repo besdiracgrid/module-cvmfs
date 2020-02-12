@@ -23,10 +23,3 @@ Install:
 mkdir /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl7/node/12.16.0
 tar -C /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl7/node/12.16.0 --strip-components 1 -xf node-v12.16.0-linux-x64.tar.xz
 ```
-
-Install yarn:
-
-```
-module load node/12.16.0
-npm -g install yarn
-```
