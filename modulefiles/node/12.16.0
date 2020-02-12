@@ -1,0 +1,18 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for Node.js $version"
+}
+module-whatis "Modulefile for Node.js $version"
+
+# Dependencies
+module load common/1.0
+
+set node_root $::env(BASEDIR)/node/$version
+
+# Our environment
+prepend-path PATH $node_root/bin
+prepend-path MANPATH $node_root/share/man
