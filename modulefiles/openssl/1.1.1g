@@ -15,5 +15,6 @@ set openssl_root $::env(BASEDIR)/openssl/$version
 
 # Our environment
 prepend-path PATH $openssl_root/bin
+prepend-path LD_LIBRARY_PATH $openssl_root/lib
 prepend-path PKG_CONFIG_PATH $openssl_root/lib/pkgconfig
 prepend-path MANPATH $openssl_root/share/man

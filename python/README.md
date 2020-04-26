@@ -11,20 +11,27 @@
 sudo yum install openssl-devel bzip2-devel zlib-devel sqlite-devel expat-devel gdbm-devel readline-devel libuuid-devel
 ```
 
-### python 3.7.3
+### python 3.8.2
+
+> The steps are so complicated that a script `install-python3.sh` is written.
 
 Download:
 
 ```
-wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
-tar -xf Python-3.7.3.tgz
+wget https://www.python.org/ftp/python/3.8.2/Python-3.8.2.tgz
+tar -xf Python-3.8.2.tgz
+```
+
+Clean module environment:
+
+```
+module purge
 ```
 
 Install:
 
 ```
-module load openssl/1.1.1b
-./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.7.3 --with-ensurepip
+CPPFLAGS=-I/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/include LDFLAGS='-L/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib -Wl,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib' ./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2 --enable-shared --with-ensurepip --with-openssl=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g
 make
 make install
 ```
@@ -32,16 +39,16 @@ make install
 Create links for default python:
 
 ```
-ln -s python3 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.7.3/bin/python
-ln -s pip3 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.7.3/bin/pip
-ln -s pydoc3 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.7.3/bin/pydoc
-ln -s python3-config /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.7.3/bin/python-config
+ln -s python3 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/python
+ln -s pip3 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/pip
+ln -s pydoc3 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/pydoc
+ln -s python3-config /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/python-config
 ```
 
 Install virtualenv:
 
 ```
-module load python/3.7.3
+module load python/3.8.2
 # Make sure using the correct python
 which python
 python -V
@@ -59,6 +66,12 @@ Download:
 ```
 wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
 tar -xf Python-2.7.16.tar.xz
+```
+
+Clean module environment:
+
+```
+module purge
 ```
 
 Install:

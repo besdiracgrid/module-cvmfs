@@ -12,6 +12,12 @@ Download:
 git clone https://github.com/vim/vim.git
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

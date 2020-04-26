@@ -14,6 +14,12 @@ wget https://www.openssl.org/source/openssl-1.1.1g.tar.gz
 tar -xf openssl-1.1.1g.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

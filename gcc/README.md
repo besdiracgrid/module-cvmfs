@@ -14,6 +14,12 @@ wget http://ftp.gnu.org/gnu/gcc/gcc-4.9.4/gcc-4.9.4.tar.gz
 tar -xf gcc-4.9.4.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

@@ -14,6 +14,12 @@ wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.22.0.tar.gz
 tar -xf git-2.22.0.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

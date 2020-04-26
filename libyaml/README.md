@@ -16,6 +16,12 @@ wget http://pyyaml.org/download/libyaml/yaml-0.2.2.tar.gz
 tar -xf yaml-0.2.2.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

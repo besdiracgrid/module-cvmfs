@@ -1,0 +1,20 @@
+#%Module1.0
+
+set version [lindex [split [module-info name] /] end]
+
+proc ModulesHelp { } {
+  global version
+  puts stderr "Modulefile for python $version"
+}
+module-whatis "Modulefile for python $version"
+
+# Dependencies
+module load common/1.0
+
+set python_root $::env(BASEDIR)/python/$version
+
+# Our environment
+prepend-path PATH $python_root/bin
+prepend-path LD_LIBRARY_PATH $python_root/lib
+prepend-path PKG_CONFIG_PATH $python_root/lib/pkgconfig
+prepend-path MANPATH $python_root/share/man

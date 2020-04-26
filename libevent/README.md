@@ -14,6 +14,12 @@ wget https://github.com/libevent/libevent/releases/download/release-2.1.10-stabl
 tar -xf libevent-2.1.10-stable.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

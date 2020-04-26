@@ -14,6 +14,12 @@ wget https://downloads.sourceforge.net/project/sshpass/sshpass/1.06/sshpass-1.06
 tar -xf sshpass-1.06.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```

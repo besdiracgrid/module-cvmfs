@@ -24,11 +24,16 @@ wget https://root.cern/download/root_v6.18.04.source.tar.gz
 tar -xf root_v6.18.04.source.tar.gz
 ```
 
+Clean and set module environment:
+
+```
+module purge
+module load gcc/4.9.4 python/2.7.15 cmake/3.15.3
+```
+
 Install:
 
 ```
-module load gcc/4.9.4 python/2.7.15 cmake/3.15.3
-
 mkdir build
 cd build
 

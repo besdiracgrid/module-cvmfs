@@ -14,6 +14,12 @@ wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
 tar -xf sqlite-autoconf-3290000.tar.gz
 ```
 
+Clean module environment:
+
+```
+module purge
+```
+
 Install:
 
 ```
