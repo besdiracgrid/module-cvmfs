@@ -36,6 +36,10 @@ make
 make install
 ```
 
+The openssl and sqlite3 provided by SL6 are too old for python 3.8.
+`RPATH` is set for `python`, `openssl` and `sqlite`, so that
+they do not need to be loaded explicitly.
+
 Create links for default python:
 
 ```
