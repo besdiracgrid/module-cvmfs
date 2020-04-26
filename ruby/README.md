@@ -8,8 +8,8 @@
 ### Preparation
 ```
 sudo yum install gcc-c++ patch readline-devel zlib-devel \
-   libyaml-devel libffi-devel openssl-devel make \
-   bzip2-devel autoconf automake libtool bison iconv-devel sqlite-devel
+    libyaml-devel libffi-devel openssl-devel make \
+    bzip2-devel autoconf automake libtool bison iconv-devel sqlite-devel
 ```
 
 ### ruby 2.6.3

@@ -9,7 +9,7 @@ proc ModulesHelp { } {
 module-whatis "Modulefile for cuda $version"
 
 # Dependencies
-module load common/1.0                                                                            \
+module load common/1.0
 
 # Our environment
 setenv CUDA_ROOT $::env(BASEDIR)/cuda/$version

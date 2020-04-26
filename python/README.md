@@ -31,7 +31,11 @@ module purge
 Install:
 
 ```
-CPPFLAGS=-I/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/include LDFLAGS='-L/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib -Wl,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib' ./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2 --enable-shared --with-ensurepip --with-openssl=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g
+CPPFLAGS=-I/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/include \
+    LDFLAGS='-L/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib -Wl,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib' \
+    ./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2 \
+    --enable-shared --with-ensurepip \
+    --with-openssl=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g
 make
 make install
 ```
