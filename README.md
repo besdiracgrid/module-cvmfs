@@ -38,5 +38,5 @@ Unload the environment:
 module unload root
 ```
 
-For more about `Environment Modules`, please see the
+For more about Environment Modules, please see the
 [documentation](https://modules.readthedocs.io/).
