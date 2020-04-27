@@ -2,67 +2,51 @@
 
 <https://pypy.org/>
 
-[Portable PyPy](https://github.com/squeaky-pl/portable-pypy)
-
 
 ## Installation
 
 Only need to extract the portable binary.
 
-### pypy3.6 7.2.0
+### pypy3.6 7.3.1
 
 Download:
 
 ```
-wget https://github.com/squeaky-pl/portable-pypy/releases/download/pypy3.6-7.2.0/pypy3.6-7.2.0-linux_x86_64-portable.tar.bz2
+wget https://bitbucket.org/pypy/pypy/downloads/pypy3.6-v7.3.1-linux64.tar.bz2
 ```
 
 Install:
 
 ```
-mkdir /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0
-tar -C /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0 --strip-components 1 -xf pypy3.6-7.2.0-linux_x86_64-portable.tar.bz2
-```
-
-Create links for default python:
-
-```
-ln -s pypy3.6 /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/python
-ln -s virtualenv-pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/virtualenv
+mkdir /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.3.1
+tar -C /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.3.1 --strip-components 1 -xf pypy3.6-v7.3.1-linux64.tar.bz2
 ```
 
 Install pip:
 
 ```
-/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/pypy3 -m ensurepip
-/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.2.0/bin/pip3 install --upgrade pip wheel setuptools
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.3.1/bin/pypy3 -m ensurepip
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy3/7.3.1/bin/pip3 install --upgrade pip wheel setuptools virtualenv
 ```
 
-### pypy2.7 7.2.0
+### pypy2.7 7.3.1
 
 Download:
 
 ```
-wget https://github.com/squeaky-pl/portable-pypy/releases/download/pypy-7.2.0/pypy-7.2.0-linux_x86_64-portable.tar.bz2
+wget https://bitbucket.org/pypy/pypy/downloads/pypy2.7-v7.3.1-linux64.tar.bz2
 ```
 
 Install:
 
 ```
-mkdir /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0
-tar -C /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0 --strip-components 1 -xf pypy-7.2.0-linux_x86_64-portable.tar.bz2
-```
-
-Create links for default python:
-
-```
-ln -s pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/python
-ln -s virtualenv-pypy /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/virtualenv
+mkdir /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.3.1
+tar -C /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.3.1 --strip-components 1 -xf pypy2.7-v7.3.1-linux64.tar.bz2
 ```
 
 Install pip:
 
 ```
-/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/pypy -m ensurepip
-/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.2.0/bin/pip install --upgrade pip wheel setuptools
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.3.1/bin/pypy -m ensurepip
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/pypy/pypy/7.3.1/bin/pip install --upgrade pip wheel setuptools virtualenv
 ```
