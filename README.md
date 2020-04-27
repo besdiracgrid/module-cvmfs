@@ -1,4 +1,6 @@
-## Module files and install instructions
+# Module Files and Install Instructions
+
+<https://github.com/besdiracgrid/module-cvmfs>
 
 Some common packages are installed on IHEP cvmfs under the path
 `/cvmfs/dcomputing.ihep.ac.cn/hpc/sw`. The environment of these packages
@@ -16,6 +18,8 @@ if not using bash:
 unset MODULEPATH
 source /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/modulesetup/bash
 ```
+
+Change `x86_64-sl6` to `x86_64-sl7` for SL7 OS.
 
 Then find which packages are available for use:
 
@@ -38,5 +42,5 @@ Unload the environment:
 module unload root
 ```
 
-For more about Environment Modules, please see the
+For more information about Environment Modules, please check the
 [documentation](https://modules.readthedocs.io/).
