@@ -1,10 +1,11 @@
 #!/bin/sh
 
+arch=x86_64-sl6
 python_version=3.8.2
 openssl_version=1.1.1g
 sqlite_version=3.29.0
 
-hpc_root=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6
+hpc_root="/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/${arch}"
 python_root="${hpc_root}/python/${python_version}"
 openssl_root="${hpc_root}/openssl/${openssl_version}"
 sqlite_root="${hpc_root}/sqlite/${sqlite_version}"

@@ -1,11 +1,10 @@
 #!/bin/sh
 
+arch=x86_64-sl6
 python_version=2.7.18
 
-hpc_root=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6
+hpc_root="/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/${arch}"
 python_root="${hpc_root}/python/${python_version}"
-openssl_root="${hpc_root}/openssl/${openssl_version}"
-sqlite_root="${hpc_root}/sqlite/${sqlite_version}"
 
 
 curdir=$(cd $(dirname "$0");pwd)
