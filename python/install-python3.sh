@@ -27,20 +27,20 @@ cd "Python-${python_version}"
 export CPPFLAGS="-I${sqlite_root}/include"
 export LDFLAGS="-L${sqlite_root}/lib -Wl,-rpath=${python_root}/lib,-rpath=/${openssl_root}/lib,-rpath=${sqlite_root}/lib"
 
-./configure --prefix=${python_root} --enable-shared --with-ensurepip --with-openssl=${openssl_root}
+./configure --prefix="${python_root}" --enable-shared --with-ensurepip --with-openssl="${openssl_root}"
 make -j
 make install
 
 cd ..
 
 # Create links
-ln -s python3 ${python_root}/bin/python
-ln -s pip3 ${python_root}/bin/pip
-ln -s pydoc3 ${python_root}/bin/pydoc
-ln -s python3-config ${python_root}/bin/python-config
+ln -s python3 "${python_root}/bin/python"
+ln -s pip3 "${python_root}/bin/pip"
+ln -s pydoc3 "${python_root}/bin/pydoc"
+ln -s python3-config "${python_root}/bin/python-config"
 
 # Create modulefile
-cp ${curdir}/../modulefiles/python/3.8.0 ${hpc_root}/modulefiles/python/${python_version}
+cp "${curdir}/../modulefiles/python/3.8.0" "${hpc_root}/modulefiles/python/${python_version}"
 
 # Install virtualenv
 module load python/${python_version}
