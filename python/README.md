@@ -32,7 +32,7 @@ Install:
 
 ```
 CPPFLAGS=-I/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/include \
-    LDFLAGS='-L/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib -Wl,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib' \
+    LDFLAGS='-L/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib -Wl,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g/lib,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/sqlite/3.29.0/lib' \
     ./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2 \
     --enable-shared --with-ensurepip \
     --with-openssl=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/openssl/1.1.1g
@@ -56,24 +56,18 @@ ln -s python3-config /cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2
 Install virtualenv:
 
 ```
-module load python/3.8.2
-# Make sure using the correct python
-which python
-python -V
-
-# Make sure pip is installed in the correct location
-which pip
-pip install --upgrade pip
-pip install virtualenv
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/pip install --upgrade pip
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/pip install virtualenv
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/3.8.2/bin/virtualenv --version
 ```
 
-### python 2.7.16
+### python 2.7.18
 
 Download:
 
 ```
-wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
-tar -xf Python-2.7.16.tar.xz
+wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz
+tar -xf Python-2.7.18.tar.xz
 ```
 
 Clean module environment:
@@ -85,7 +79,7 @@ module purge
 Install:
 
 ```
-./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.16 --enable-unicode=ucs4
+LDFLAGS='-Wl,-rpath=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.18/lib' ./configure --prefix=/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.18 --enable-unicode=ucs4 --enable-shared
 make
 make install
 ```
@@ -93,14 +87,9 @@ make install
 Install pip and virtualenv
 
 ```
-module load python/2.7.16
-# Make sure using the correct python
-which python
-python -V
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.18/bin/python -m ensurepip --default-pip
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.18/bin/pip install --upgrade pip
 
-python -m ensurepip --default-pip
-# Make sure pip is installed in the correct location
-which pip
-pip install --upgrade pip
-pip install virtualenv
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.18/bin/pip install virtualenv
+/cvmfs/dcomputing.ihep.ac.cn/hpc/sw/x86_64-sl6/python/2.7.18/bin/virtualenv --version
 ```

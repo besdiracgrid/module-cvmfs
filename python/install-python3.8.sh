@@ -43,14 +43,9 @@ ln -s python3-config "${python_root}/bin/python-config"
 cp "${curdir}/../modulefiles/python/3.8.0" "${hpc_root}/modulefiles/python/${python_version}"
 
 # Install virtualenv
-module load python/${python_version}
-which python
-python -V
-
-which pip
-pip install --upgrade pip
-pip install virtualenv
-which virtualenv
+"${python_root}/bin/pip" install --upgrade pip
+"${python_root}/bin/pip" install virtualenv
+"${python_root}/bin/virtualenv" --version
 
 cd ..
 rm -rf temp
